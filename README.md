@@ -210,7 +210,7 @@ clear_junk_group - clear add removed group or deactivated groups on db
 
 ## Disclaimer
 
-[![GNU Affero General Public License 2.0](https://telegra.ph/file/dde62784a972164cad289.mp4)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
+[![GNU Affero General Public License 2.0](https://telegra.ph/file/75155eb2d19eb9d3be926.jpg)](https://www.gnu.org/licenses/agpl-3.0.en.html#header)    
 
 Licensed under [GNU AGPL 2.0.](https://github.com/EvamariaTG/evamaria/blob/master/LICENSE)
 
