@@ -1,7 +1,7 @@
 services:
   # A Docker web service
   - type: web
-    name: AADHAVAN
+    name: Bot
     env: python
     startCommand: python3 bot.py
     buildCommand:  pip install -U pip && pip install -U -r requirements.txt
