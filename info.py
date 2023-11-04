@@ -21,19 +21,19 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ('API_ID','20919286'))
+API_HASH = environ('API_HASH','57b85f72104db3f08f9795b0410eb556')
+BOT_TOKEN = environ('BOT_TOKEN','   5800701341:AAF59t9smjVT0A-S36eX7De4xJ9_SXSvLb0')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS' ,'https://telegra.ph/file/627bdf9df66c266063c3a.jpg   https://telegra.ph/file/1039e02ed3f2d5f43945e.jpg  https://telegra.ph/file/bcef867fb6d6206561271.jpg  https://telegra.ph/file/e3039fda5cfff908a51d6.jpg  https://telegra.ph/file/cada0cabed1ba4a7c8680.jpg  https://telegra.ph/file/532b491c81630ee00dbb8.jpg  https://telegra.ph/file/02e9b4ba2ec7948b626a6.jpg  https://telegra.ph/file/adf67be3ff2a3e4a347c3.jpg')).split()
+PICS = (environ.get('PICS' ,'https://telegra.ph/file/6d1fe9d8abc161526f328.jpg https://telegra.ph/file/a335a23278664216aa46b.jpg https://telegra.ph/file/8cb71f85fbf94e473b0fc.jpg https://telegra.ph/file/fc850215c1d35e02156bb.jpg https://telegra.ph/file/58e88d00a2c95bbd88d3e.jpg https://telegra.ph/file/6d1fe9d8abc161526f328.jpg https://telegra.ph/file/0609b6d76280816448683.jpg https://telegra.ph/file/6d36df86f74ef094d4b92.jpg https://telegra.ph/file/c9dab268d94766be9744a.jpg https://telegra.ph/file/eb6b8c1318a6bb86297b5.jpg https://telegra.ph/file/90cf5a9e9537b83756d7e.jpg https://telegra.ph/file/cfb90c96cf46af04ec357.jpg https://telegra.ph/file/ec5b26d392ac055f0e476.jpg https://telegra.ph/file/bc98f8f82b4be4017c058.jpg https://telegra.ph/file/616c75acedc131b1ce285.jpg https://telegra.ph/file/55c28268ba481ebffb539.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5909932224').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001871354889').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -42,7 +42,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Wen:Wen@cluster0.dopcbu3.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -64,7 +64,7 @@ SHORT_API = environ.get("SHORT_API")
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''-1002062290731))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Ags_Support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 PM_IMDB = environ.get('PM_IMDB', "True")
@@ -77,7 +77,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001871354889')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
